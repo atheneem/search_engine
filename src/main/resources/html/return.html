@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <!-- header -->
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">${title}</h1>
+            <h2 class="subtitle">
+              By Athene Marston
+              <div class="field is-grouped is-pulled-right">
+                <h2 class="text"><a href= ${locationsLink} class="has-text-info">
+                  View Locations &nbsp; &nbsp; &nbsp; </a>
+                </h2>
+                <h2 class="text"><a href= ${indexLink} class="has-text-info">
+                  View Index </a>
+              </h2>
+             </div>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+    <!-- show input form -->
+    <section class="section">
+        <div class="container">
+        <h2 class="title py-1">Search the Index:</h2>
+
+        <form method="${method}">
+            <div class="field pb-1">
+            <label class="label px-1 is-italic is-size-8" for="search">Seperate multiple query words with a space</label>
+            <div class="control has-icons-left">
+                <input class="input is-rounded is-medium" name="search" id="search" placeholder="Enter your search query here.">
+                <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+                </span>
+            </div>
+            </div>
+
+            <div class="field is-grouped">
+                <p class="control py-1">
+                    <label class="checkbox mr-3">
+                        <input type="checkbox" name="exact" value="true"> Exact search
+                    </label>
+                </p>
+
+                <p class="buttons">
+                    <button class="button is-small is-rounded">
+                      </span>
+                      <span> <a href= ${downloadHTML} >Download Index JSON File</a></span>
+                    </button>
+                  </p>
+              </div>
+
+                <div class="control level-item">
+                <button class="button is-primary is-medium" type="submit">
+                    <i class="fas fa-comment"></i>
+                    &nbsp;Submit
+                </button>
+                </div>
+        </form>
+        </div>
+    </section>
+    
+     <!-- the remainder of this html is written from the doPost WebServlet method -->
